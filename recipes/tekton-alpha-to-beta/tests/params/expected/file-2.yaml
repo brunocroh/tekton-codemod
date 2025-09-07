@@ -1,0 +1,4 @@
+spec:
+  params:
+    - name: ADDR
+      value: https://example.com/foo.json

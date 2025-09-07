@@ -1,0 +1,70 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "rootDir": "./",
+
+    "target": "ESNext",
+    "lib": [
+      "ESNext"
+    ],
+    /* Modules */
+    "module": "NodeNext",
+    "moduleResolution": "nodenext",
+    "allowImportingTsExtensions": true,
+    "resolvePackageJsonExports": true,
+    "resolvePackageJsonImports": true,
+    "resolveJsonModule": true,
+    "allowArbitraryExtensions": true,
+
+    /* JavaScript Support */
+    "allowJs": true,
+    "checkJs": true,
+
+    /* Emit */
+    "noEmit": true,
+
+    /* Interop Constraints */
+    "verbatimModuleSyntax": true,
+    "allowSyntheticDefaultImports": true,
+    "erasableSyntaxOnly": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Type Checking */
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": false,
+    "strictFunctionTypes": true,
+
+    /* Completeness */
+    "skipLibCheck": true
+  },
+  "include": [
+    "./recipes/",
+    "./utils"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/build/**",
+    "**/fixtures/**",
+    "**/expected/**",
+    "**/tests/**",
+    "**/*.fixture.mjs",
+    "**/*.fixture.mts",
+    "**/*.fixture.js",
+    "**/*.fixture.ts",
+    "**/*.mock.mjs",
+    "**/*.e2e.mjs",
+    "**/*.e2e.mts",
+    "**/*.e2e.js",
+    "**/*.e2e.ts",
+    "**/*.spec.mjs",
+    "**/*.spec.mts",
+    "**/*.spec.js",
+    "**/*.spec.ts",
+    "**/*.test.mjs",
+    "**/*.test.mts",
+    "**/*.test.js",
+    "**/*.test.ts",
+  ],
+}

@@ -1,0 +1,6 @@
+spec:
+  inputs:
+    params:
+      - name: ADDR
+        description: Address to curl.
+        type: string

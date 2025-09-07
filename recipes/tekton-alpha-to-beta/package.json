@@ -1,0 +1,22 @@
+{
+  "name": "tekton-alpha-to-beta",
+  "version": "1.0.0",
+  "description": "Migrating From Tekton v1alpha1 to Tekton v1beta1 ",
+  "type": "module",
+  "scripts": {
+    "test": "node --run test:params && node --run test:resources",
+    "test:params": "npx codemod@latest jssg test -l yaml ./scripts/params.ts ./tests/ --filter params",
+    "test:resources": "npx codemod@latest jssg test -l yaml ./scripts/resources.ts ./tests/ --filter resources",
+    "check-types": "npx tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunocroh/tektok-codemod.git",
+    "directory": "recipes/tektok-alpha-to-beta",
+    "bugs": "https://github.com/brunocroh/tekton-codemod/issues"
+  },
+  "devDependencies": {
+    "@codemod.com/jssg-types": "^1.0.7",
+    "typescript": "^5.8.3"
+  }
+}

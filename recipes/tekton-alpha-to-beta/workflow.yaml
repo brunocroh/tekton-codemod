@@ -1,0 +1,29 @@
+version: "1"
+
+nodes:
+  - id: apply-transforms
+    name: Apply AST Transformations
+    type: automatic
+    steps:
+      - name: "update spec.input.params → spec.params"
+        js-ast-grep:
+          js_file: scripts/params.ts
+          base_path: .
+          include:
+            - "**/*.yml"
+            - "**/*.yaml"
+          exclude:
+            - "**/node_modules/**"
+          language: "yaml"
+      - name: >
+          "update spec.inputs.resources → spec.resources.input"
+          "and spec.output.resources → spec.resources.output"
+        js-ast-grep:
+          js_file: scripts/resources.ts
+          base_path: .
+          include:
+            - "**/*.yml"
+            - "**/*.yaml"
+          exclude:
+            - "**/node_modules/**"
+          language: "yaml"

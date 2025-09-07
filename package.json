@@ -1,0 +1,37 @@
+{
+  "name": "tekton-codemod",
+  "version": "1.0.0",
+  "description": "A collection of codemod recipes for tekton.",
+  "type": "module",
+  "scripts": {
+    "lint:fix": "biome lint --fix ./",
+    "lint": "biome lint ./",
+    "pre-commit": "node --run lint:fix; node --run type-check; node --run test",
+    "test": "npm run test --workspaces --if-present",
+    "test-legacy": "npm run test-legacy --workspaces --if-present",
+    "type-check": "tsc"
+  },
+  "author": "Bruno Rodrigues (swe@brunocroh.com)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brunocroh/tekton-codemod"
+  },
+  "keywords": [
+    "automation",
+    "codemod",
+    "migrations",
+    "tekton"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brunocroh/tekton-codemod/issues"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.1.4",
+    "@types/node": "^24.2.1",
+    "typescript": "^5.9.2"
+  },
+  "workspaces": [
+    "./recipes/*"
+  ]
+}

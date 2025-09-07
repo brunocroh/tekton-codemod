@@ -1,0 +1,14 @@
+spec:
+  resources:
+    inputs:
+      - name: skaffold
+        type: git
+    outputs:
+      - name: baked-image
+        type: image
+
+  test:
+    resources:
+      - name: skaffold
+        type: git
+  
