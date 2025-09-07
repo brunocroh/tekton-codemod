@@ -4,7 +4,7 @@
 node_modules
 npm-debug.log
 .npm
-.env.*
+.env
 
 # OSX
 .DS_Store
