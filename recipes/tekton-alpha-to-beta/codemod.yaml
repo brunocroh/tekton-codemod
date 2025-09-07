@@ -1,7 +1,7 @@
 schema_version: "1.0"
 
 name: tekton-alpha-to-beta
-version: 1.0.0
+version: 1.0.1
 description: Migrating From Tekton v1alpha1 to Tekton v1beta1
 author: swe@brunocroh.com
 license: MIT
